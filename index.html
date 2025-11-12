@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio de Sesión</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: #fff;
+      text-shadow: 2px 2px 5px #ff6f91;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      border: 2px solid #ff6f91;
+      border-radius: 10px;
+      outline: none;
+      text-align: center;
+    }
+
+    button {
+      background: #ff6f91;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff4e88;
+    }
+  </style>
+</head>
+<body>
+  <h1>💗 Inicia sesión 💗</h1>
+  <form onsubmit="return validarContraseña()">
+    <input type="password" id="password" placeholder="Escribe la contraseña">
+    <button type="submit">Entrar</button>
+  </form>
+
+  <script>
+    function validarContraseña() {
+      const password = document.getElementById("password").value;
+      if (password === "010925") {
+        window.location.href = "amor.html";
+        return false;
+      } else {
+        alert("Contraseña incorrecta 💔");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
